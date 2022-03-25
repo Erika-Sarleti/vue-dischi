@@ -6,13 +6,12 @@
         <SingleCard v-for="card in cardRay" :key="card.id" :card-data="card"/>
       </div>
     </div>
-
   </main>
 </template>
 
 <script>
 import axios from 'axios';
-import SingleCard from './SingleCard.vue'
+import SingleCard from './SingleCard.vue';
 export default {
   name: 'MainDisc',
   components:{
@@ -23,8 +22,9 @@ export default {
       cardRay: null,
     };
   },
-  getApi() {
-    axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+  created() {
+    axios
+    .get('https://flynn.boolean.careers/exercises/api/array/music')
       .then((response) => {
         this.cardRay = response.data.response;
         console.log(response.data.response)
