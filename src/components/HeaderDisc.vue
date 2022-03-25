@@ -1,7 +1,7 @@
 <template>
   <header>
-      <div class="container">
-          <img src="../assets/logo.png" alt="">
+      <div class="container-fluid">
+          <img src="../assets/spotify_logo.png" alt="">
       </div>
   </header>
 </template>
@@ -17,14 +17,12 @@ export default {
 
 @import '../assets/styles/variables.scss';
 @import '../assets/styles/general.scss';
-    .container{
-        width: 1600px;
-        margin: 0 auto;
-        height: 100px;
+    .container-fluid{
+
         background-color: $header-background;
         img{
-            height: 100%;
-            padding: .5em 2em;
+            height: 50px;
+            
         }
     }
 

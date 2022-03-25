@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-primary">
+  <main>
     <div class="container py-5">
       <div class="row justify-content-center row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
         <div v-if="cardRay == null" class="text-center">Loading Data</div>
@@ -34,5 +34,10 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+@import '../assets/styles/variables.scss';
 
+  main{
+    background-color: $main_background;
+  
+  }
 </style>
